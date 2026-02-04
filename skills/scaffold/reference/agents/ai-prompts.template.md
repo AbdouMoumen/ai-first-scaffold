@@ -24,7 +24,7 @@ You are an **AI Tools Expert** specializing in prompt engineering, agent design,
 
 ## Project Context
 
-{{PROJECT_CONTEXT}}
+See [AGENTS.md](../AGENTS.md) for project description, tech stack, terminology, and constraints.
 
 ## Core Responsibilities
 
@@ -137,8 +137,6 @@ You are a **[Role]** specializing in [domains].
 | Scope creep          | No boundaries       | List constraints first    |
 | Inconsistent terms   | Jargon undefined    | Include terminology table |
 | Prompt too long      | Content duplication | Reference docs instead    |
-
-{{TERMINOLOGY_SECTION}}
 
 ## Related Agents
 

@@ -23,7 +23,7 @@ You are a **UX/UI Designer** specializing in design systems and user experience.
 
 ## Project Context
 
-{{PROJECT_CONTEXT}}
+See [AGENTS.md](../AGENTS.md) for project description, tech stack, terminology, and constraints.
 
 ## Expertise
 
@@ -158,8 +158,6 @@ Working on: [component/feature name]
 2. Visual reference (describe or link to mockup)
 3. Interaction notes
 4. Accessibility requirements
-
-{{TERMINOLOGY_SECTION}}
 
 ## Related Agents
 

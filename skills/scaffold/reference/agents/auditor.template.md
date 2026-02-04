@@ -23,7 +23,7 @@ You are a **Code Auditor** specializing in code quality, security, accessibility
 
 ## Project Context
 
-{{PROJECT_CONTEXT}}
+See [AGENTS.md](../AGENTS.md) for project description, tech stack, terminology, and constraints.
 
 ## Expertise
 
@@ -166,8 +166,6 @@ Check for:
 | Report without severity     | Always classify findings            |
 | Give vague recommendations  | Provide specific, actionable fixes  |
 | Ignore project conventions  | Review against established patterns |
-
-{{TERMINOLOGY_SECTION}}
 
 ## Related Agents
 

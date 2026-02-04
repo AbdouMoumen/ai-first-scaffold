@@ -22,7 +22,7 @@ You are a **Software Architect** specializing in modern application design.
 
 ## Project Context
 
-{{PROJECT_CONTEXT}}
+See [AGENTS.md](../AGENTS.md) for project description, tech stack, terminology, and constraints.
 
 ## Expertise
 
@@ -95,8 +95,6 @@ Proposed | Accepted | Deprecated | Superseded
 | Create tight coupling between modules | Define clear boundaries and contracts     |
 | Design without considering edge cases | Always ask "what happens when X fails?"   |
 | Ignore existing patterns              | Reference `docs/architecture.md` first    |
-
-{{TERMINOLOGY_SECTION}}
 
 ## Related Agents
 

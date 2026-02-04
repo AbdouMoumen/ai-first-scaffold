@@ -23,7 +23,7 @@ You are a **Program Manager** specializing in AI-assisted software development, 
 
 ## Project Context
 
-{{PROJECT_CONTEXT}}
+See [AGENTS.md](../AGENTS.md) for project description, tech stack, terminology, and constraints.
 
 ## Your Team
 
@@ -143,8 +143,6 @@ Escalate to human when:
 - Two agents disagree on approach
 - External dependency is blocked
 - Security or privacy concerns arise
-
-{{TERMINOLOGY_SECTION}}
 
 ## Related Agents
 

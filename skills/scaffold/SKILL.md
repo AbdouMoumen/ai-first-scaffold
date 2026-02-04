@@ -57,11 +57,18 @@ Parse for:
 
 Store: `stack.language`, `stack.framework`, `stack.database`, `stack.testing`, `stack.linting`
 
-#### 3. Domain Terminology
+#### 3. Domain Terminology (Optional)
 ```
-Are there domain-specific terms I should know? 
-For example, in a medical app you might say "patient" instead of "user".
+Does this project have domain-specific terms I should use?
+(Skip if using standard software terms)
 ```
+
+Examples to prompt (only if they have a specific domain):
+- Medical: "patient" not "user", "encounter" not "visit"
+- Finance: "transaction", "settlement", "clearing"
+- E-commerce: "order", "SKU", "cart"
+
+If user says "no" or "standard terms", skip this section in generated files.
 
 If user provides terms, store as table:
 ```
@@ -69,7 +76,7 @@ If user provides terms, store as table:
 |------|---------|-----------|
 ```
 
-Store: `domain.terminology[]`
+Store: `domain.terminology[]` (empty array if skipped)
 
 #### 4. Hard Constraints
 ```
@@ -118,11 +125,9 @@ Before proceeding, confirm understanding:
 **Stack**: {{stack summary}}
 **Team**: {{team.size}} - {{team.roles}}
 
-**Terminology**:
-{{terminology table or "Standard terms"}}
+**Terminology**: {{terminology table or "Standard terms (none specified)"}}
 
-**Constraints**:
-{{constraints list or "None specified"}}
+**Constraints**: {{constraints list or "None specified"}}
 
 **Agents to Generate**: {{agent list}}
 
@@ -231,7 +236,7 @@ Replace these placeholders in templates:
 |-------------|--------|---------|
 | `{{PROJECT_NAME}}` | interview.project.name | "MyApp" |
 | `{{PROJECT_DESCRIPTION}}` | interview.project.description | "A task management app" |
-| `{{TERMINOLOGY_TABLE}}` | interview.domain.terminology | Markdown table |
+| `{{TERMINOLOGY_TABLE}}` | interview.domain.terminology | Markdown table (or omit section if empty) |
 | `{{DOMAIN_CONSTRAINTS}}` | interview.domain.constraints | Bullet list |
 | `{{TECH_STACK}}` | interview.stack | "Next.js, TypeScript, Supabase" |
 | `{{COMMANDS_TABLE}}` | Derived from stack | npm/yarn/pnpm commands |
@@ -239,6 +244,10 @@ Replace these placeholders in templates:
 | `{{TEST_COMMAND}}` | Derived from stack | "npm run test" |
 | `{{BUILD_COMMAND}}` | Derived from stack | "npm run build" |
 | `{{PRE_COMMIT_COMMANDS}}` | Derived from stack | Validation command chain |
+
+**Conditional sections:**
+- If `domain.terminology` is empty → omit Terminology section entirely from AGENTS.md
+- Agent files reference AGENTS.md for context (no duplication)
 
 ### 3.3: Generate Files
 

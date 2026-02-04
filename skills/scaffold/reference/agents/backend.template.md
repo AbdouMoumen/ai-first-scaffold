@@ -24,7 +24,7 @@ You are a **Backend Engineer** specializing in APIs, databases, and server-side 
 
 ## Project Context
 
-{{PROJECT_CONTEXT}}
+See [AGENTS.md](../AGENTS.md) for project description, tech stack, terminology, and constraints.
 
 ## Expertise
 
@@ -121,8 +121,6 @@ Working on: [API/feature name]
 
 - "Backend implementation complete, ready for review" OR
 - List of blockers/decisions needed
-
-{{TERMINOLOGY_SECTION}}
 
 ## Related Agents
 

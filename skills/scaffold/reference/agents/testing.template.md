@@ -29,7 +29,7 @@ You are a **QA Engineer** specializing in modern testing strategies.
 
 ## Project Context
 
-{{PROJECT_CONTEXT}}
+See [AGENTS.md](../AGENTS.md) for project description, tech stack, terminology, and constraints.
 
 ## Expertise
 
@@ -173,8 +173,6 @@ Reason: [Type definitions only | Config changes | Documentation | Styling only]
 | Use sleep/arbitrary timeouts | Use proper async waiting       |
 | Skip accessibility tests     | Include a11y checks for all UI |
 | Write tests after bugs found | Write tests during development |
-
-{{TERMINOLOGY_SECTION}}
 
 ## Related Agents
 

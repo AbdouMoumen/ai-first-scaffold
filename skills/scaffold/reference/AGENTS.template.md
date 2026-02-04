@@ -6,9 +6,11 @@
 {{COMMANDS_TABLE}}
 ```
 
+{{#if TERMINOLOGY_TABLE}}
 ## Terminology
 
-{{TERMINOLOGY_SECTION}}
+{{TERMINOLOGY_TABLE}}
+{{/if}}
 
 ## Architecture Constraints
 
