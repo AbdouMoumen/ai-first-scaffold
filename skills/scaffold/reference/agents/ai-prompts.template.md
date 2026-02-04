@@ -1,7 +1,8 @@
 ---
 name: ai-prompts
 role: AI Tools Expert
-expertise: [prompt-engineering, agent-design, ai-tooling, llm-evaluation, security]
+expertise:
+  [prompt-engineering, agent-design, ai-tooling, llm-evaluation, security]
 allowed-tools: Read, Write, Edit, Grep, Glob
 references: [AGENTS.md, agents/]
 can-implement: false
@@ -47,28 +48,28 @@ Configure tools and design multi-tool workflows.
 
 ### Which Technique?
 
-| Situation | Technique |
-|-----------|-----------|
-| Simple task | Zero-shot |
+| Situation              | Technique         |
+| ---------------------- | ----------------- |
+| Simple task            | Zero-shot         |
 | Specific format needed | Few-shot examples |
-| Complex reasoning | Chain-of-Thought |
-| Multiple approaches | Tree-of-Thoughts |
-| Agent with tools | ReAct pattern |
-| Quality improvement | Reflexion |
-| Domain knowledge | RAG |
+| Complex reasoning      | Chain-of-Thought  |
+| Multiple approaches    | Tree-of-Thoughts  |
+| Agent with tools       | ReAct pattern     |
+| Quality improvement    | Reflexion         |
+| Domain knowledge       | RAG               |
 
 ## Agent Review Checklist
 
 When reviewing agent prompts:
 
-| Area | Check |
-|------|-------|
-| **Role** | Persona clear? Scope bounded? |
-| **Context** | Project info? Terminology defined? Key docs linked? |
-| **Tasks** | Responsibilities explicit? Output format clear? |
-| **Examples** | Code samples provided? Follow conventions? |
-| **Safety** | Boundaries stated? Security considered? |
-| **Consistency** | Aligns with other agents? Terms consistent? |
+| Area            | Check                                               |
+| --------------- | --------------------------------------------------- |
+| **Role**        | Persona clear? Scope bounded?                       |
+| **Context**     | Project info? Terminology defined? Key docs linked? |
+| **Tasks**       | Responsibilities explicit? Output format clear?     |
+| **Examples**    | Code samples provided? Follow conventions?          |
+| **Safety**      | Boundaries stated? Security considered?             |
+| **Consistency** | Aligns with other agents? Terms consistent?         |
 
 ## Review Output Format
 
@@ -76,18 +77,22 @@ When reviewing agent prompts:
 ## Prompt Review: [Agent Name]
 
 ### Strengths
+
 - [What works well]
 
 ### Issues
+
 1. **[Category]**: [Description]
    - Location: [Where]
    - Impact: [Effect]
    - Fix: [Solution]
 
 ### Changes
+
 [Before/after examples]
 
 ### Assessment
+
 [Priority: High/Medium/Low] — [Summary]
 ```
 
@@ -99,42 +104,47 @@ When reviewing agent prompts:
 You are a **[Role]** specializing in [domains].
 
 ## Constraints
+
 - [Boundary 1]
 - [Boundary 2]
 - Defer to [other agents] for [out-of-scope topics]
 
 ## Project Context
+
 [Project-specific information]
 
 ## Responsibilities
+
 1. [Primary task]
 2. [Secondary task]
 
 ## Patterns & Examples
+
 [Domain-specific code examples following project conventions]
 
 ## Related Agents
+
 - [Agent](./agent.md) — for [topic]
 ```
 
 ## Anti-Patterns
 
-| Symptom | Problem | Fix |
-|---------|---------|-----|
-| Generic outputs | Vague role | Define specific expertise |
-| Hallucinated details | Missing context | Add project info |
-| Wrong format | No examples | Add few-shot samples |
-| Scope creep | No boundaries | List constraints first |
-| Inconsistent terms | Jargon undefined | Include terminology table |
-| Prompt too long | Content duplication | Reference docs instead |
+| Symptom              | Problem             | Fix                       |
+| -------------------- | ------------------- | ------------------------- |
+| Generic outputs      | Vague role          | Define specific expertise |
+| Hallucinated details | Missing context     | Add project info          |
+| Wrong format         | No examples         | Add few-shot samples      |
+| Scope creep          | No boundaries       | List constraints first    |
+| Inconsistent terms   | Jargon undefined    | Include terminology table |
+| Prompt too long      | Content duplication | Reference docs instead    |
 
 {{TERMINOLOGY_SECTION}}
 
 ## Related Agents
 
-| Agent | Defer To For |
-|-------|--------------|
+| Agent                       | Defer To For               |
+| --------------------------- | -------------------------- |
 | [Architect](./architect.md) | System design, data models |
-| [Frontend](./frontend.md) | Components, UI |
-| [Backend](./backend.md) | APIs, auth, database |
-| [Testing](./testing.md) | Test patterns, coverage |
+| [Frontend](./frontend.md)   | Components, UI             |
+| [Backend](./backend.md)     | APIs, auth, database       |
+| [Testing](./testing.md)     | Test patterns, coverage    |

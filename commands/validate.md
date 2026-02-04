@@ -40,36 +40,46 @@ Check if the current project has valid AI-first infrastructure.
 ## 🔍 AI-First Infrastructure Validation
 
 ### AGENTS.md
+
 ✅ Found and valid
+
 - Commands: ✅
 - Terminology: ✅
 - Workflow: ✅
 - Pre-Commit: ✅
 
 ### PROGRESS.md
+
 ✅ Found and valid
+
 - Frontmatter: ✅
 - Sprint section: ✅
 
 ### Agents
+
 ✅ 4 agents found
+
 - program-manager.md: ✅
 - architect.md: ✅
 - testing.md: ✅
 - auditor.md: ✅
 
 ### Skills
+
 ✅ 3 skills found
+
 - status: ✅
 - implement: ✅
 - prepare-work: ✅
 
 ### Summary
+
 ✅ All infrastructure valid
 
 OR
 
 ⚠️ Issues found:
+
 - [ ] Missing: agents/testing.md
 - [ ] Invalid frontmatter: agents/frontend.md
 ```

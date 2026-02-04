@@ -91,23 +91,23 @@ your-project/
 
 ## Agent Selection
 
-| Team Size | Agents Included |
-|-----------|-----------------|
-| Solo developer | program-manager, architect, testing, auditor |
-| Small team (2-4) | + frontend OR backend |
-| Full team (5+) | All 8 agents |
-| Has UI | + design |
-| AI-focused | + ai-prompts |
+| Team Size        | Agents Included                              |
+| ---------------- | -------------------------------------------- |
+| Solo developer   | program-manager, architect, testing, auditor |
+| Small team (2-4) | + frontend OR backend                        |
+| Full team (5+)   | All 8 agents                                 |
+| Has UI           | + design                                     |
+| AI-focused       | + ai-prompts                                 |
 
 ## Skills Overview
 
-| Skill | Purpose |
-|-------|---------|
-| **status** | Check project state, detect inconsistencies |
-| **implement** | Execute work with tests, review, commit |
-| **prepare-work** | Transform issues into implementation plans |
-| **discuss** | Multi-agent discussions for decisions |
-| **review-artifact** | Quality review with severity ranking |
+| Skill               | Purpose                                     |
+| ------------------- | ------------------------------------------- |
+| **status**          | Check project state, detect inconsistencies |
+| **implement**       | Execute work with tests, review, commit     |
+| **prepare-work**    | Transform issues into implementation plans  |
+| **discuss**         | Multi-agent discussions for decisions       |
+| **review-artifact** | Quality review with severity ranking        |
 
 ## Validation
 
@@ -118,6 +118,7 @@ After setup, validate your infrastructure:
 ```
 
 This checks:
+
 - AGENTS.md has required sections
 - PROGRESS.md has valid frontmatter
 - Agents have proper structure
@@ -132,10 +133,10 @@ Add domain-specific terms in AGENTS.md:
 ```markdown
 ## Terminology
 
-| Term | Meaning | Don't Use |
-|------|---------|-----------|
-| **Customer** | End user of the system | user, client |
-| **Order** | Purchase transaction | transaction, purchase |
+| Term         | Meaning                | Don't Use             |
+| ------------ | ---------------------- | --------------------- |
+| **Customer** | End user of the system | user, client          |
+| **Order**    | Purchase transaction   | transaction, purchase |
 ```
 
 ### Constraints

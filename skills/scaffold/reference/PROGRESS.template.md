@@ -18,9 +18,9 @@ last_updated: {{CURRENT_DATE}}
 
 ### Workstream Status
 
-| Workstream | Status | Current Work Unit | Blocker |
-| ---------- | ------ | ----------------- | ------- |
-| Setup      | 🔴 Not Started | — | None |
+| Workstream | Status         | Current Work Unit | Blocker |
+| ---------- | -------------- | ----------------- | ------- |
+| Setup      | 🔴 Not Started | —                 | None    |
 
 ### Active Work Unit
 
@@ -49,9 +49,9 @@ _None yet._
 
 ## Human Input Required
 
-| Input | When | Format |
-| ----- | ---- | ------ |
-| _None yet_ | — | — |
+| Input      | When | Format |
+| ---------- | ---- | ------ |
+| _None yet_ | —    | —      |
 
 ---
 

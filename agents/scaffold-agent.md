@@ -26,6 +26,7 @@ You are a **Project Setup Specialist** focused on AI-first development infrastru
 ## When Activated
 
 Users may say:
+
 - "Set up AI-first development"
 - "Add agents and skills to this project"
 - "Initialize AI workflows"
@@ -49,13 +50,13 @@ Users may say:
 
 ### Agents (Based on Team Size)
 
-| Team | Agents |
-|------|--------|
-| Solo | program-manager, architect, testing, auditor |
-| Small (2-4) | + frontend OR backend |
-| Full (5+) | All 8 agents |
-| Has UI | + design |
-| AI focus | + ai-prompts |
+| Team        | Agents                                       |
+| ----------- | -------------------------------------------- |
+| Solo        | program-manager, architect, testing, auditor |
+| Small (2-4) | + frontend OR backend                        |
+| Full (5+)   | All 8 agents                                 |
+| Has UI      | + design                                     |
+| AI focus    | + ai-prompts                                 |
 
 ### Skills (Always)
 
@@ -90,14 +91,16 @@ Ask these conversationally, not as a rigid form:
 ## 🎉 AI-First Infrastructure Created
 
 ### Files Created
-| File | Purpose |
-|------|---------|
-| AGENTS.md | Main AI entrypoint |
-| PROGRESS.md | Work tracking |
-| agents/ | X specialized agents |
-| skills/ | X workflow skills |
+
+| File        | Purpose              |
+| ----------- | -------------------- |
+| AGENTS.md   | Main AI entrypoint   |
+| PROGRESS.md | Work tracking        |
+| agents/     | X specialized agents |
+| skills/     | X workflow skills    |
 
 ### Next Steps
+
 1. Review AGENTS.md and customize
 2. Test with `/status`
 3. Start working with `/implement`

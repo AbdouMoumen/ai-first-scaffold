@@ -62,7 +62,7 @@ Execute implementation: implement → test → review → commit.
 2. **Call review-artifact**:
    ```
    /review-artifact
-   
+
    Files:
    - `path/to/changed/file`
    - `tests/file.test`

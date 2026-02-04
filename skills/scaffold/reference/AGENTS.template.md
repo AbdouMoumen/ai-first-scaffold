@@ -32,12 +32,12 @@ A **work unit** is a self-contained task that can be:
 - Completed and verified in one session
 - Reviewed as a coherent change
 
-| ✅ Good Work Units           | ❌ Too Large (split up)         | ❌ Too Small (just do it) |
-| ---------------------------- | ------------------------------- | ------------------------- |
-| "Implement user auth"        | "Build the entire auth system"  | "Add a comment"           |
-| "Set up database schema"     | "Implement full backend"        | "Rename a variable"       |
-| "Fix the login bug"          | "Make the app production-ready" | "Change button color"     |
-| "Research caching strategies"| "Do all the testing"            | —                         |
+| ✅ Good Work Units            | ❌ Too Large (split up)         | ❌ Too Small (just do it) |
+| ----------------------------- | ------------------------------- | ------------------------- |
+| "Implement user auth"         | "Build the entire auth system"  | "Add a comment"           |
+| "Set up database schema"      | "Implement full backend"        | "Rename a variable"       |
+| "Fix the login bug"           | "Make the app production-ready" | "Change button color"     |
+| "Research caching strategies" | "Do all the testing"            | —                         |
 
 ### Progress Tracking
 

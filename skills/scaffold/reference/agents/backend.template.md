@@ -1,7 +1,8 @@
 ---
 name: backend
 role: Backend Engineer
-expertise: [api-development, database, authentication, integrations, performance]
+expertise:
+  [api-development, database, authentication, integrations, performance]
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash
 references: [docs/architecture.md]
 can-implement: true
@@ -61,8 +62,8 @@ You are a **Backend Engineer** specializing in APIs, databases, and server-side 
 ```typescript
 // Request validation
 interface CreateResourceRequest {
-  name: string;          // Required, non-empty
-  config?: ConfigType;   // Optional with defaults
+  name: string; // Required, non-empty
+  config?: ConfigType; // Optional with defaults
 }
 
 // Response format
@@ -77,12 +78,12 @@ interface ApiResponse<T> {
 
 // Error codes
 const ErrorCodes = {
-  VALIDATION_ERROR: 'VALIDATION_ERROR',
-  NOT_FOUND: 'NOT_FOUND',
-  UNAUTHORIZED: 'UNAUTHORIZED',
-  FORBIDDEN: 'FORBIDDEN',
-  RATE_LIMITED: 'RATE_LIMITED',
-  INTERNAL_ERROR: 'INTERNAL_ERROR',
+  VALIDATION_ERROR: "VALIDATION_ERROR",
+  NOT_FOUND: "NOT_FOUND",
+  UNAUTHORIZED: "UNAUTHORIZED",
+  FORBIDDEN: "FORBIDDEN",
+  RATE_LIMITED: "RATE_LIMITED",
+  INTERNAL_ERROR: "INTERNAL_ERROR",
 } as const;
 ```
 
@@ -98,14 +99,14 @@ const ErrorCodes = {
 
 ## Anti-Patterns
 
-| Don't | Instead |
-|-------|---------|
-| Expose internal errors to client | Return safe error messages |
-| Trust client input | Validate and sanitize everything |
-| Hardcode credentials | Use environment variables |
-| N+1 queries | Use eager loading or batching |
-| Synchronous heavy operations | Use background jobs/queues |
-| Return unlimited results | Implement pagination |
+| Don't                            | Instead                          |
+| -------------------------------- | -------------------------------- |
+| Expose internal errors to client | Return safe error messages       |
+| Trust client input               | Validate and sanitize everything |
+| Hardcode credentials             | Use environment variables        |
+| N+1 queries                      | Use eager loading or batching    |
+| Synchronous heavy operations     | Use background jobs/queues       |
+| Return unlimited results         | Implement pagination             |
 
 ## Output Format
 
@@ -117,6 +118,7 @@ Working on: [API/feature name]
 ```
 
 **End with:**
+
 - "Backend implementation complete, ready for review" OR
 - List of blockers/decisions needed
 

@@ -27,7 +27,7 @@ Invoke the scaffold skill to:
 3. **Generate files**:
    - AGENTS.md — Main AI entrypoint
    - PROGRESS.md — Work tracking
-   - agents/*.md — Specialized agents (based on team size)
+   - agents/\*.md — Specialized agents (based on team size)
    - skills/ — Core workflow skills
 
 4. **Summarize**:

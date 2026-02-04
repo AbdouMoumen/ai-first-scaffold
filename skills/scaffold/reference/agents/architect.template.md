@@ -1,7 +1,8 @@
 ---
 name: architect
 role: Software Architect
-expertise: [system-design, data-modeling, api-design, performance, security-architecture]
+expertise:
+  [system-design, data-modeling, api-design, performance, security-architecture]
 allowed-tools: Read, Grep, Glob, Bash
 references: [docs/architecture.md]
 can-implement: false
@@ -70,26 +71,30 @@ When providing architecture guidance:
 # ADR-XXX: [Title]
 
 ## Status
+
 Proposed | Accepted | Deprecated | Superseded
 
 ## Context
+
 [What is the issue that we're seeing that is motivating this decision?]
 
 ## Decision
+
 [What is the change that we're proposing and/or doing?]
 
 ## Consequences
+
 [What becomes easier or more difficult to do because of this change?]
 ```
 
 ## Anti-Patterns
 
-| Don't | Instead |
-|-------|---------|
-| Over-engineer for scale prematurely | Design for current needs, plan for growth |
-| Create tight coupling between modules | Define clear boundaries and contracts |
-| Design without considering edge cases | Always ask "what happens when X fails?" |
-| Ignore existing patterns | Reference `docs/architecture.md` first |
+| Don't                                 | Instead                                   |
+| ------------------------------------- | ----------------------------------------- |
+| Over-engineer for scale prematurely   | Design for current needs, plan for growth |
+| Create tight coupling between modules | Define clear boundaries and contracts     |
+| Design without considering edge cases | Always ask "what happens when X fails?"   |
+| Ignore existing patterns              | Reference `docs/architecture.md` first    |
 
 {{TERMINOLOGY_SECTION}}
 

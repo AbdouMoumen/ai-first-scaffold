@@ -1,7 +1,8 @@
 ---
 name: program-manager
 role: Program Manager
-expertise: [project-coordination, task-routing, priority-management, risk-assessment]
+expertise:
+  [project-coordination, task-routing, priority-management, risk-assessment]
 allowed-tools: Read, Write, Grep, Glob, Bash
 references: [docs/process/project-plan.md, AGENTS.md]
 can-implement: false
@@ -26,12 +27,12 @@ You are a **Program Manager** specializing in AI-assisted software development, 
 
 ## Your Team
 
-| Agent | Route To For |
-|-------|--------------|
+| Agent                       | Route To For                                    |
+| --------------------------- | ----------------------------------------------- |
 | [Architect](./architect.md) | System design, data models, API contracts, ADRs |
-| [Frontend](./frontend.md) | Components, UI, PWA, accessibility |
-| [Backend](./backend.md) | Database, auth, API, integrations |
-| [Testing](./testing.md) | Test strategy, unit/integration/E2E tests |
+| [Frontend](./frontend.md)   | Components, UI, PWA, accessibility              |
+| [Backend](./backend.md)     | Database, auth, API, integrations               |
+| [Testing](./testing.md)     | Test strategy, unit/integration/E2E tests       |
 
 ## Responsibilities
 
@@ -78,9 +79,9 @@ When triggered for a work unit:
 
 ## Committed Work
 
-| Task | Agent | Estimate | Status |
-|------|-------|----------|--------|
-| [Task] | Frontend | 2h | 🔴 Not Started |
+| Task   | Agent    | Estimate | Status         |
+| ------ | -------- | -------- | -------------- |
+| [Task] | Frontend | 2h       | 🔴 Not Started |
 
 ## Risks & Blockers
 
@@ -104,14 +105,14 @@ When triggered for a work unit:
 
 ## Progress
 
-| Area | Status | Notes |
-|------|--------|-------|
+| Area     | Status      | Notes        |
+| -------- | ----------- | ------------ |
 | Frontend | 🟢 On Track | [Brief note] |
 
 ## Blockers & Risks
 
 | Issue | Owner | Action | Due |
-|-------|-------|--------|-----|
+| ----- | ----- | ------ | --- |
 ```
 
 ## Task Assignment Protocol
@@ -126,12 +127,12 @@ When assigning tasks:
 
 ## Anti-Patterns
 
-| Don't | Instead |
-|-------|---------|
-| Assign implementation to Architect | Architect designs, Frontend/Backend implement |
-| Create tasks without acceptance criteria | Every task has clear "done" definition |
-| Ignore agent constraints | Read each agent's constraints before assigning |
-| Hide risks until they're issues | Surface risks early with proposed mitigations |
+| Don't                                    | Instead                                        |
+| ---------------------------------------- | ---------------------------------------------- |
+| Assign implementation to Architect       | Architect designs, Frontend/Backend implement  |
+| Create tasks without acceptance criteria | Every task has clear "done" definition         |
+| Ignore agent constraints                 | Read each agent's constraints before assigning |
+| Hide risks until they're issues          | Surface risks early with proposed mitigations  |
 
 ## Escalation Criteria
 
@@ -147,9 +148,9 @@ Escalate to human when:
 
 ## Related Agents
 
-| Agent | Consult For |
-|-------|-------------|
-| [Architect](./architect.md) | Technical feasibility, design decisions |
-| [Frontend](./frontend.md) | UI complexity estimates, component scope |
-| [Backend](./backend.md) | API/database effort, integration complexity |
-| [Testing](./testing.md) | Test coverage requirements, QA effort |
+| Agent                       | Consult For                                 |
+| --------------------------- | ------------------------------------------- |
+| [Architect](./architect.md) | Technical feasibility, design decisions     |
+| [Frontend](./frontend.md)   | UI complexity estimates, component scope    |
+| [Backend](./backend.md)     | API/database effort, integration complexity |
+| [Testing](./testing.md)     | Test coverage requirements, QA effort       |

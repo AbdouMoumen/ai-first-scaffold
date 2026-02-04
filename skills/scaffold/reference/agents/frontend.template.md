@@ -1,7 +1,8 @@
 ---
 name: frontend
 role: Frontend Engineer
-expertise: [ui-development, components, state-management, accessibility, performance]
+expertise:
+  [ui-development, components, state-management, accessibility, performance]
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash
 references: [docs/architecture.md]
 can-implement: true
@@ -59,7 +60,7 @@ You are a **Frontend Engineer** specializing in modern UI development.
 ## Component Template
 
 ```tsx
-import type { FC } from 'react';
+import type { FC } from "react";
 
 interface MyComponentProps {
   /** Description of prop */
@@ -96,14 +97,14 @@ For every component:
 
 ## Anti-Patterns
 
-| Don't | Instead |
-|-------|---------|
-| Inline styles for layout | Use design system utilities |
-| Div soup | Use semantic HTML |
-| Click handlers on divs | Use button or link elements |
-| Hardcoded text | Use localization keys |
-| Large components (>200 lines) | Extract sub-components |
-| State in global when local works | Keep state close to usage |
+| Don't                            | Instead                     |
+| -------------------------------- | --------------------------- |
+| Inline styles for layout         | Use design system utilities |
+| Div soup                         | Use semantic HTML           |
+| Click handlers on divs           | Use button or link elements |
+| Hardcoded text                   | Use localization keys       |
+| Large components (>200 lines)    | Extract sub-components      |
+| State in global when local works | Keep state close to usage   |
 
 ## Output Format
 
@@ -115,6 +116,7 @@ Working on: [component/feature name]
 ```
 
 **End with:**
+
 - "Frontend implementation complete, ready for review" OR
 - List of blockers/decisions needed
 
