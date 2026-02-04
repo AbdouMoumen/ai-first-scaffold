@@ -1,0 +1,183 @@
+# {{PROJECT_NAME}} - AI Agent Instructions
+
+## Commands
+
+```bash
+{{COMMANDS_TABLE}}
+```
+
+## Terminology
+
+{{TERMINOLOGY_SECTION}}
+
+## Architecture Constraints
+
+{{DOMAIN_CONSTRAINTS}}
+
+## Interaction Model: Work Units
+
+This project uses a **human-triggered work unit** model:
+
+1. **Human triggers** a discrete work unit (feature, fix, review, research)
+2. **AI executes** the full unit autonomously (explore → plan → code → verify)
+3. **AI returns** completed work ready for human review
+4. **Human reviews** and either accepts or triggers a refinement
+
+> ⚠️ This is NOT continuous autonomous operation. Each work unit has clear boundaries and a completion state. AI does not decide what to work on next.
+
+### Work Unit Scope
+
+A **work unit** is a self-contained task that can be:
+
+- Completed and verified in one session
+- Reviewed as a coherent change
+
+| ✅ Good Work Units           | ❌ Too Large (split up)         | ❌ Too Small (just do it) |
+| ---------------------------- | ------------------------------- | ------------------------- |
+| "Implement user auth"        | "Build the entire auth system"  | "Add a comment"           |
+| "Set up database schema"     | "Implement full backend"        | "Rename a variable"       |
+| "Fix the login bug"          | "Make the app production-ready" | "Change button color"     |
+| "Research caching strategies"| "Do all the testing"            | —                         |
+
+### Progress Tracking
+
+**File**: `PROGRESS.md` (repo root) — single source of truth for project status.
+
+**AI Protocol**:
+
+1. **Check status first**: Use `/status` skill to validate project state before starting work
+2. **On work unit start**: Update `active_work_unit` in YAML frontmatter
+3. **On work unit complete**: Move to "Completed Work Units", clear active section
+4. **Commit progress**: Include `PROGRESS.md` changes in work unit commits
+
+**Status Emojis** (for parsing):
+
+- 🔴 Not Started
+- 🟡 In Progress
+- 🟢 Complete
+- 🔵 Blocked
+
+## Workflow
+
+### For Complex Work Units
+
+1. **Start in Plan mode** — explore first, don't jump to coding
+2. Read relevant docs: `docs/architecture.md`, existing patterns
+3. Create/find issue before implementation
+
+### For Implementation
+
+Follow `{{SKILLS_LOCATION}}/implement/SKILL.md`:
+
+- Phase 0: Explore (read, search, don't code)
+- Phase 1: Plan (document approach)
+- Phase 2: Code (implement with tests)
+- Phase 3: Commit (with review)
+
+### After Changes
+
+Always run: `{{PRE_COMMIT_COMMANDS}}`
+
+---
+
+## Pre-Commit Requirements (MANDATORY)
+
+**Before EVERY commit**, you MUST run and pass:
+
+```bash
+{{PRE_COMMIT_COMMANDS}}
+```
+
+**Do NOT commit if:**
+
+- Lint errors exist (warnings are acceptable)
+- Any test fails
+- Build is broken
+
+**Exceptions** (rare, must note in commit message):
+
+- WIP commits on feature branches (use `git commit -m "WIP: ..."`)
+- Documentation-only changes (skip tests, still run lint)
+
+---
+
+## Project Overview
+
+{{PROJECT_DESCRIPTION}}
+
+## Tech Stack
+
+{{TECH_STACK}}
+
+## Key Documentation
+
+- `docs/architecture.md` - Technical architecture and data models
+- `agents/README.md` - AI sub-agents for specialized tasks
+- `{{SKILLS_LOCATION}}/` - Reusable AI skills
+
+## AI Sub-Agents
+
+Specialized agents are available in the `agents/` directory:
+
+{{AGENTS_TABLE}}
+
+## Skills
+
+{{SKILLS_TABLE}}
+
+---
+
+## Artifact Review Process
+
+**When to trigger a review:**
+
+- Before finalizing architecture proposals or design docs
+- Before committing significant generated code
+- When creating or modifying agent instructions
+- For implementation plans before execution
+
+**How to invoke:**
+
+1. **Trigger**: Human asks for artifact review, OR AI self-triggers during implementation
+2. **Completion**: AI completes full review and returns verdict before handing back to human
+
+## Coding Guidelines
+
+{{CODING_GUIDELINES}}
+
+### Component Organization (AI Guidelines)
+
+Apply these rules when writing or refactoring code.
+
+**Extraction triggers:**
+
+1. **4+ similar patterns** → extract to shared utility/function
+2. **3+ side effects** in one function → extract to separate functions
+3. **Same pattern 2+ times** → extract shared component/module
+4. **8+ parameters** on a function → consider object parameter or splitting
+
+**Do NOT extract when:**
+
+- Would need >5 parameters passed (tight coupling)
+- Function would only be used once AND is <20 lines
+- First occurrence of a pattern (wait for repetition)
+- Extraction would create circular dependencies
+
+### Parallel Agent Workflow
+
+When multiple agents work simultaneously:
+
+1. **Each agent commits separately** to their modified files
+2. Use conventional commit format: `<type>(<scope>): <description>`
+3. Orchestrator reviews all commits before push
+
+## Security Considerations
+
+- Never include API keys or secrets in prompts
+- Sanitize any user-generated content
+- Validate AI outputs for security vulnerabilities
+- Keep authentication logic human-reviewed
+
+---
+
+_Generated by [ai-first-scaffold](https://github.com/AbdouMoumen/ai-first-scaffold)_
