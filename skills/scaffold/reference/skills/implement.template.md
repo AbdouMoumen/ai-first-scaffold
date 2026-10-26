@@ -1,4 +1,3 @@
-````skill
 ---
 name: implement
 description: Executes implementation plans - implements with tests, review, and commit. Use for feature work or bug fixes.
@@ -104,4 +103,3 @@ Skip review for changes < 10 lines with no logic change.
 | Tests fail | Fix tests or implementation |
 | Review rejects | Fix issues, re-review (max 3x) |
 | Stuck after 3 reviews | Stop, report to human |
-````

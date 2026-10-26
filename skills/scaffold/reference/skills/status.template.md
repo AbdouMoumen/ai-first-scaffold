@@ -1,4 +1,3 @@
-````skill
 ---
 name: status
 description: Consolidates project status from PROGRESS.md and git state - detects inconsistencies and validates tracking. Returns structured data for other skills or manual use.
@@ -102,4 +101,3 @@ Only fix these:
 
 - **Called by**: `implement`, `next-work-item`
 - **Calls**: None (leaf skill)
-````

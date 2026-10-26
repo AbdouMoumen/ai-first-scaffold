@@ -1,4 +1,3 @@
-````skill
 ---
 name: review-artifact
 description: Reviews artifacts by auto-detecting type and routing to domain agents - produces severity-ranked feedback. Returns structured findings (critical/major/minor).
@@ -105,4 +104,3 @@ For each reviewer perspective:
 
 - **Called by**: `implement` (Phase 3, mandatory)
 - **Invokes**: Domain agent perspectives (virtual)
-````

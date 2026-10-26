@@ -1,4 +1,3 @@
-````skill
 ---
 name: discuss
 description: Facilitates multi-agent discussions on decisions or topics - routes to stakeholders, synthesizes perspectives. Returns consensus or disagreements with recommendations.
@@ -121,4 +120,3 @@ For each relevant agent, consider their viewpoint:
 ### Recommendation
 [Final recommendation with reasoning]
 ```
-````
